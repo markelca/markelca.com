@@ -23,5 +23,12 @@
       <guid>http://localhost:1313/posts/test/</guid>
       <description>&lt;h1 id=&#34;test&#34;&gt;test&lt;/h1&gt;&#xA;&lt;p&gt;test foobar&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Trade-Offs on Monolith vs. Distributed Architectures</title>
+      <link>http://localhost:1313/posts/2022-09-13-trade-offs-on-monolith-vs-distributed-architectures/</link>
+      <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2022-09-13-trade-offs-on-monolith-vs-distributed-architectures/</guid>
+      <description>&lt;p&gt;These days there is much talking about distributed architectures and event-sourcing models, especially in cloud infrastructures and Kubernetes clusters. It has gained a lot of momentum in the last few years, and it may look for some people that is the ultimate solution for their architecture coupling and scalability problems. I’ve been reading about it in the last weeks, and I thought about sharing my considerations on it.&lt;/p&gt;&#xA;&lt;p&gt;If you’re considering breaking your monolith into microservices, this article may be for you. I’ll try to dissect the trade-offs and defend the monolithic approach for some situations under certain practices.&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

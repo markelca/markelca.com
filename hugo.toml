@@ -11,7 +11,7 @@ pagination.pagerSize = 10
   dateformNumTime = "2006-01-02 15:04"
 
   # Subtitle for home
-  homeSubtitle = "The home of Markel Cuesta — Software Engineering, Automation, Tech Nerd."
+  homeSubtitle = "The home of Markel Cuesta — thoughts on software engineering, AI, and the tech industry."
 
   # Set disableReadOtherPosts to true in order to hide the links to other posts.
   disableReadOtherPosts = false
@@ -55,6 +55,14 @@ pagination.pagerSize = 10
   [[params.social]]
     name = "email"
     url = "mailto:cuesta.markel@proton.me"
+
+  [[params.social]]
+    name = "leetcode"
+    url = "https://leetcode.com/u/markelca/"
+
+  [[params.social]]
+    name = "resume"
+    url = "https:/example.com"
 
 [taxonomies]
   category = "blog"
