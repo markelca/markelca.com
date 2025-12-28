@@ -62,7 +62,7 @@ pagination.pagerSize = 10
 
   [[params.social]]
     name = "resume"
-    url = "https:/example.com"
+    url = "/pdf/Markel_Cuesta_Software_Engineer.pdf"
 
 [taxonomies]
   category = "blog"
