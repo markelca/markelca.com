@@ -11,14 +11,14 @@ If you’re considering breaking your monolith into microservices, this article 
 ![Contrete building](./img/patrick-robert-doyle-_8bM_EqmFgM-unsplash_cropped.jpg)
 Photo by Patrick Robert Doyle on [Unsplash](https://unsplash.com/photos/white-and-gray-concrete-building-_8bM_EqmFgM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-# Definitions
+## Definitions
 First, what is distributed architecture? Is there a difference between the distributed system? And what is considered a monolithic or a microservices architecture?
 
 You can skip this section if you’re already familiarized with these terms. If not, let’s define these concepts to get rid of ambiguities.
 
 Also, I’ve seen disagreement on the internet around some of these definitions, so I wrote down my references in the last section.
 
-## Distributed System
+### Distributed System
 First, let’s introduce a technical definition and then summarize it.
 
 >“A distributed system is an application that executes a collection of protocols to coordinate the actions of multiple processes on a network, such that all components cooperate together to perform a single or small set of related tasks.”
@@ -28,7 +28,7 @@ So, a distributed system is just a group of machines connected through remote ac
 
 A client-server architecture is an example of a distributed system. In the most basic web application, you connect to the server through HTTP to fetch the web page.
 
-## Monolithic architecture
+### Monolithic architecture
 It’s common to think of a monolithic architecture as a single piece of the coupled codebase for your entire app living in the same machine, but we have to keep in mind that all the systems we categorize as “monolithic” are probably also distributed systems if we are rigorous. A simple nonstatic webpage will most likely be read from a database in another machine. So we will not define it just based on how many machines are involved in the system.
 
 >“An architecture is monolithic when all the code is a single unit of deployment.”
@@ -42,7 +42,7 @@ And I rely on this statement in the broad software architecture literature becau
 
 So, knowing you can talk about the architecture of specific layers, even if you have your frontend and backend decoupled using a REST API, there could be a monolithic frontend and a monolithic backend connecting to a monolithic database — because all three are single units of deployment.
 
-## Distributed architecture
+### Distributed architecture
 Well, thinking of the definition of monolith architecture, we could define the distributed architecture definition by the negative.
 
 >“A distributed architecture is a group of deployment units connected through remote access protocols.”
@@ -50,30 +50,30 @@ Well, thinking of the definition of monolith architecture, we could define the d
 
 This applies to any layer of an application too. For example, your backend could be a group of services running on different machines, each containing one of your domain logic pieces. Or a database could be distributed if it runs on several machines through sharding, redundancy systems, and load balancers.
 
-## Microservices
+### Microservices
 Microservices architecture is a type of [Service-Oriented architecture](https://en.wikipedia.org/wiki/Service-oriented_architecture). This means the codebase is built across multiple distributed services. Microservices have the particularity of including their own encapsulated database in each service. It’s heavily based on Domain Driven Design (DDD), so the services are built based on the idea of DDD’s Bounded Context. One of this architecture’s core ideas is that every microservice is independently deployable and not coupled to the others.
 
 {{< figure src="./img/microservices-architecture.png" alt="Microservices architecture" position="center" caption="Microservices architecture" caption-class="center" >}}
 
-# Why Would You Want Microservices?
+## Why Would You Want Microservices?
 The main reasons are the extreme scalability and flexibility. When you divide your business logic around a lot of little uncoupled interchangeable pieces, you gain a level of plasticity difficult to accomplish any other way.
 
 This scalability and flexibility come because of the following possibilities:
 
-## Autoscale-specific use cases
+### Autoscale-specific use cases
 Autoscale is a singular service depending on the load that it receives instead of scaling the entire machine (with the expensive costs that means). You could, for example, scale the payment service on demand and leave the other use cases untouched.
 
-## Implementation independence
+### Implementation independence
 Write a microservice in any programming language and any database implementation and keep all that hidden from all the rest services.
 
 This offers quite a lot of independence to the teams to use the right tools for each job and not be restricted to the company’s tech stack.
 
-## Scoped crashes
+### Scoped crashes
 Keep the failure scope controlled if one service doesn’t work as intended.
 
 You can think of each service as an input/output API, and be sure that if the output is not the expected one, you’ll find the bug inside the service due to the encapsulation.
 
-## Independent deployability
+### Independent deployability
 This is undoubtedly one of the most important features of the Microservices architecture. You can deploy each microservice independently so the deploys are lighter, more agile, and won’t break any other functionality outside the service. If you don’t achieve independent deployability, you’ll have a distributed monolith, which we’ll discuss later in this article.
 
 ## Avoid development collisions
@@ -86,11 +86,11 @@ In a monolith, the scope of change comes across the entire app instead of being 
 
 {{< figure src="./img/microservices-scope-of-change.png" alt="Scope of change in a microservices architecture" position="center" caption="Scope of change in a microservices architecture" caption-class="center" >}}
 
-## Simpler contextualization
+### Simpler contextualization
 
 It can be easier for a developer to understand their part of the system instead of struggling with the whole project before performing a simple task.
 
-## Fixes organizational silos
+### Fixes organizational silos
 With microservices modeled around a business domain, you can properly align the business requirements with the IT architecture as its core instead of having product and dev departments that know nothing about each other.
 
 >“In traditional IT organizations, the act of developing software is often handled by an entirely separate part of the business from that which actually defines requirements and has a connection with the customer.”
@@ -117,7 +117,7 @@ So that’s why the microservices approach seems more convenient at a larger sca
   {{< /layout >}}
 An organizational view of the traditional IT/business divide (left) vs a more product-oriented approach.
 
-# Why You Wouldn’t Want Microservices
+## Why You Wouldn’t Want Microservices
 As you may know, it adds a lot of complexity everywhere. The first group of issues are the well-known fallacies of distributed computing. These are a set of common assertions made by L Peter Deutsch and other colleagues at Sun Microsystems, and although you can find them in a monolithic architecture, too, in a distributed one, this is maximized.
 
 Let’s summarize each one of them:
