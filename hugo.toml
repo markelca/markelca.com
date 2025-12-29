@@ -10,6 +10,9 @@ pagination.pagerSize = 10
   dateformNum     = "2006-01-02"
   dateformNumTime = "2006-01-02 15:04"
 
+  # Custom CSS files
+  customCSS = ["/css/custom.css"]
+
   # Subtitle for home
   homeSubtitle = "The home of Markel Cuesta — thoughts on software engineering, AI, and the tech industry."
 

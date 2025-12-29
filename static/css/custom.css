@@ -1,0 +1,17 @@
+/* Profile image styling */
+.profile-image {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  float: left;
+}
+
+/* On mobile devices, don't float the image */
+@media (max-width: 768px) {
+  .profile-image {
+    float: none;
+    display: block;
+    margin: 0 auto 20px auto;
+  }
+}

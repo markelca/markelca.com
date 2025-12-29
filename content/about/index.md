@@ -4,7 +4,7 @@ description: "Software engineer focused on backend systems, developer tools, and
 layout: "about"
 date: 2025-11-11
 ---
-{{< image src="/img/profilepic.jpg" alt="Profile Picture" style="width: 200px; height: 200px; margin-right: 20px; margin-bottom: 10px; float: left;" >}}I'm a software engineer based in San Sebastián (Spain), passionate about backend systems, AI, and developer tooling.
+{{< image src="/img/profilepic.jpg" alt="Profile Picture" class="profile-image" >}}I'm a software engineer based in San Sebastián (Spain), passionate about backend systems, AI, and developer tooling.
 
 Over the last 5 years, I've worked primarily in backend engineering, focusing on REST APIs, event-driven systems, and AI-driven automation. I've built optimization algorithms for a booking allocation engine, large-scale serverless data pipelines, an enterprise-grade AI-powered automation platform, and modular, highly testable API backends.
 
