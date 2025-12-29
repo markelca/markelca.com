@@ -107,8 +107,14 @@ That’s why the layered monolithic is so common in a lot of small companies, be
 
 So that’s why the microservices approach seems more convenient at a larger scale to maximize the cohesion and communication in the organization teams, software architecture, and its relation with the client, as seen in these images below:
 
-Press enter or click to view image in full size
-Press enter or click to view image in full size
+{{< layout >}}
+    {{< column align="center" valign="center" >}}
+      {{< image src="./img/it-business-silo.png" alt="IT/Business silo" position="center" >}}
+    {{< /column >}}
+    {{< column >}}
+      {{< image src="./img/product-oriented-organization.png" alt="IT/Business silo" position="center" >}}
+    {{< /column >}}
+  {{< /layout >}}
 An organizational view of the traditional IT/business divide (left) vs a more product-oriented approach.
 
 # Why You Wouldn’t Want Microservices

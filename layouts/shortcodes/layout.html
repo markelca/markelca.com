@@ -1,0 +1,7 @@
+{{ $cols := .Get "cols" | default "2" }}
+{{ $gap := .Get "gap" | default "2rem" }}
+{{ $class := .Get "class" | default "" }}
+
+<div class="layout-columns {{ $class }}" style="display: grid; grid-template-columns: repeat({{ $cols }}, 1fr); gap: {{ $gap }}; {{ with .Get "style" }}{{ . | safeCSS }}{{ end }}">
+    {{ .Inner }}
+</div>

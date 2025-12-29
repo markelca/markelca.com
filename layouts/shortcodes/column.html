@@ -1,0 +1,12 @@
+{{ $align := .Get "align" | default "left" }}
+{{ $valign := .Get "valign" | default "top" }}
+
+{{ $alignMap := dict "left" "flex-start" "center" "center" "right" "flex-end" }}
+{{ $valignMap := dict "top" "flex-start" "center" "center" "bottom" "flex-end" "stretch" "stretch" }}
+
+{{ $alignValue := index $alignMap $align }}
+{{ $valignValue := index $valignMap $valign }}
+
+<div class="layout-column{{ with .Get "class" }} {{ . }}{{ end }}" style="display: flex; flex-direction: column; align-items: {{ $alignValue }}; justify-content: {{ $valignValue }}; {{ with .Get "style" }}{{ . | safeCSS }}{{ end }}">
+    {{ .Inner }}
+</div>
