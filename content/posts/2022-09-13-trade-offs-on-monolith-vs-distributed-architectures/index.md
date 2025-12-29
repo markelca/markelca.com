@@ -82,9 +82,9 @@ You can have multiple teams working on several features with the sureness that t
 In a monolith, the scope of change comes across the entire app instead of being an isolated component connected to the others, as we can see in the images below, so the risk of breaking a common component is higher.
 
 
-Scope of change in a monolithic application
+{{< figure src="./img/monolith-scope-of-change.png" alt="Scope of change in a monolithic application" position="center" caption="Scope of change in a monolithic application" caption-class="center" >}}
 
-Scope of change in a microservices architecture
+{{< figure src="./img/microservices-scope-of-change.png" alt="Scope of change in a microservices architecture" position="center" caption="Scope of change in a microservices architecture" caption-class="center" >}}
 
 ## Simpler contextualization
 
