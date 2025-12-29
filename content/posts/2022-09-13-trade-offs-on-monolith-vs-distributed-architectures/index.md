@@ -8,7 +8,7 @@ These days there is much talking about distributed architectures and event-sourc
 
 If you’re considering breaking your monolith into microservices, this article may be for you. I’ll try to dissect the trade-offs and defend the monolithic approach for some situations under certain practices.
 
-![](./img/patrick-robert-doyle-_8bM_EqmFgM-unsplash_cropped.jpg)
+![Contrete building](./img/patrick-robert-doyle-_8bM_EqmFgM-unsplash_cropped.jpg)
 Photo by Patrick Robert Doyle on [Unsplash](https://unsplash.com/photos/white-and-gray-concrete-building-_8bM_EqmFgM?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
 # Definitions
@@ -51,11 +51,9 @@ Well, thinking of the definition of monolith architecture, we could define the d
 This applies to any layer of an application too. For example, your backend could be a group of services running on different machines, each containing one of your domain logic pieces. Or a database could be distributed if it runs on several machines through sharding, redundancy systems, and load balancers.
 
 ## Microservices
-Microservices architecture is a type of SOA. This means the codebase is built across multiple distributed services. Microservices have the particularity of including their own encapsulated database in each service. It’s heavily based on Domain Driven Design (DDD), so the services are built based on the idea of DDD’s Bounded Context. One of this architecture’s core ideas is that every microservice is independently deployable and not coupled to the others.
+Microservices architecture is a type of [Service-Oriented architecture](https://en.wikipedia.org/wiki/Service-oriented_architecture). This means the codebase is built across multiple distributed services. Microservices have the particularity of including their own encapsulated database in each service. It’s heavily based on Domain Driven Design (DDD), so the services are built based on the idea of DDD’s Bounded Context. One of this architecture’s core ideas is that every microservice is independently deployable and not coupled to the others.
 
-Press enter or click to view image in full size
-
-Microservices architecture
+{{< figure src="./img/microservices-architecture.png" alt="Microservices architecture" position="center" caption="Microservices architecture" caption-class="center" >}}
 
 # Why Would You Want Microservices?
 The main reasons are the extreme scalability and flexibility. When you divide your business logic around a lot of little uncoupled interchangeable pieces, you gain a level of plasticity difficult to accomplish any other way.
