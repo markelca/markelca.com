@@ -17,13 +17,6 @@
       <description>&lt;p&gt;I’m a software engineer passionate about backend systems, AI, and developer tooling.&lt;/p&gt;&#xA;&lt;p&gt;Over the last 5 years, I’ve worked primarily in backend engineering, focusing on REST APIs, event-driven systems, and AI-driven automation. I’ve built optimization algorithms for a booking allocation engine, large-scale serverless data pipelines, an enterprise-grade AI-powered automation platform, and modular, highly testable API backends.&lt;/p&gt;&#xA;&lt;p&gt;I’m especially interested in distributed systems, high-performance applications, and tools that improve developer productivity. Lately, I’ve enjoyed experimenting with AI coding agents, guiding and supervising them through well-defined implementation plans to speed up delivery while keeping quality high.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Test</title>
-      <link>http://localhost:1313/posts/test/</link>
-      <pubDate>Tue, 11 Nov 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/test/</guid>
-      <description>&lt;h1 id=&#34;test&#34;&gt;test&lt;/h1&gt;&#xA;&lt;p&gt;test foobar&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Trade-Offs on Monolith vs. Distributed Architectures</title>
       <link>http://localhost:1313/posts/2022-09-13-trade-offs-on-monolith-vs-distributed-architectures/</link>
       <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>

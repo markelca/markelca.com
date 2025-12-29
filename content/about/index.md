@@ -19,4 +19,4 @@ This is the tech I'm interested in:
 
 I’m a bit obsessive about my developer workflow too. I enjoy customizing and optimizing my setup end-to-end, from my Linux distribution and desktop environment to terminal tooling and a heavily tailored Neovim configuration.
 
-Outside of coding, I enjoy reading (classic literature, philosophy, psychology), training (calisthenics, jiu-jitsu), and playing music (guitar, piano).
+Outside of coding, I enjoy reading (classic literature, philosophy, psychology), training (calisthenics, running), and playing music (guitar, piano).
