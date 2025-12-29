@@ -1,7 +1,13 @@
 {{ $cols := .Get "cols" | default "2" }}
 {{ $gap := .Get "gap" | default "2rem" }}
 {{ $class := .Get "class" | default "" }}
+{{ $captionPosition := .Get "caption-position" | default "center" }}
 
-<div class="layout-columns {{ $class }}" style="display: grid; grid-template-columns: repeat({{ $cols }}, 1fr); gap: {{ $gap }}; {{ with .Get "style" }}{{ . | safeCSS }}{{ end }}">
-    {{ .Inner }}
+<div class="layout-container">
+    <div class="layout-columns {{ $class }}" style="display: grid; grid-template-columns: repeat({{ $cols }}, 1fr); gap: {{ $gap }}; {{ with .Get "style" }}{{ . | safeCSS }}{{ end }}">
+        {{ .Inner }}
+    </div>
+    {{ with .Get "caption" }}
+    <div class="layout-caption{{ with $.Get "caption-class" }} {{ . }}{{ end }}" style="text-align: {{ $captionPosition }}; margin-top: 0.5rem;">{{ . | plainify }}</div>
+    {{ end }}
 </div>

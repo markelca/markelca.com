@@ -46,12 +46,15 @@ The `layout` shortcode accepts the following parameters:
 |-----------|---------|-------------|
 | `cols` | `2` | Number of columns in the layout |
 | `gap` | `2rem` | Space between columns |
+| `caption` | `""` | Caption text displayed below the layout |
+| `caption-position` | `center` | Caption text alignment: `left`, `center`, or `right` |
+| `caption-class` | `""` | CSS class for the caption |
 | `class` | `""` | Additional CSS classes |
 | `style` | `""` | Inline CSS styles |
 
 **Example:**
 ```markdown
-{{< layout cols="4" gap="1rem" class="my-custom-class" >}}
+{{< layout cols="4" gap="1rem" class="my-custom-class" caption="Figure 1: Comparison of different approaches" >}}
   <!-- columns here -->
 {{< /layout >}}
 ```
@@ -103,6 +106,32 @@ The `column` shortcode accepts the following parameters:
   {{< column align="center" >}}
     Regular column
   {{< /column >}}
+{{< /layout >}}
+```
+
+**With caption (centered by default):**
+```markdown
+{{< layout cols="2" caption="Figure 1: Comparison between approach A and approach B" >}}
+  {{< column align="center" >}}
+    {{< figure src="/images/approach-a.jpg" alt="Approach A" >}}
+    **Approach A**: Traditional method
+  {{< /column >}}
+
+  {{< column align="center" >}}
+    {{< figure src="/images/approach-b.jpg" alt="Approach B" >}}
+    **Approach B**: Modern method
+  {{< /column >}}
+{{< /layout >}}
+```
+
+**Caption with different alignments:**
+```markdown
+{{< layout cols="2" caption="Left-aligned caption" caption-position="left" >}}
+  <!-- content -->
+{{< /layout >}}
+
+{{< layout cols="2" caption="Right-aligned caption" caption-position="right" >}}
+  <!-- content -->
 {{< /layout >}}
 ```
 

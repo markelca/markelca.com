@@ -138,11 +138,11 @@ Aside from these, this type of architecture can lead to the following complexiti
 ### Eventual consistency
 Now, this can be hard; it’s one of the worst drawbacks of the microservices architecture. Due to the database sharding, you won’t be able to make ACID transactions. This can lead to data consistency problems, and you must synchronize your data to coordinate with other services.
 
+{{< figure src="./img/microservices-foreign-database.png" alt="You can’t access a foreign database in microservices" position="center" caption="You can’t access a foreign database in microservices" caption-class="center" >}}
 
-You can’t access a foreign database in microservices.
 To do this, you have to access the foreign database from the microservice API. There are two main ways of accomplishing this:
 
-Rely on a distributed transaction (or 2PC), which is not suitable for high loads due to the latency.
+Rely on a distributed transaction (or 2 Phase Commit), which is not suitable for high loads due to the latency.
 Implement a SAGA pattern[^7], which adds a bunch of complexity to the transaction.[^8]
 
 
@@ -163,11 +163,14 @@ If we’re analyzing the trade-offs, we must know fairly well the monolithic app
 
 In summary, there are at least three types of monolithic systems:
 
-The single-process system.
-The modular monolith.
-The distributed monolith.
+- The single-process system.
+- The modular monolith.
+- The distributed monolith.
+
 ### The single-process monolith
 This is a system in which all of the code is deployed as a single process, as you may see in the picture below. You may have multiple instances of this process for robustness or scaling reasons, but fundamentally, all the code is packed into a single process. They usually have weak or inexistent boundaries between the code modules. This approach is characterized by a high level of coupling, repeated code, and performance issues and can lead to a Big Ball of Mud.
+
+{{< figure src="./img/single-process-monolith.png" alt="Single-process monolith" position="center" >}}
 
 
 ### The modular monolith
@@ -177,9 +180,15 @@ For many organizations, the modular monolith can be an excellent choice. If the 
 
 There is even the idea of a decomposed database for individual modules; this can work very well for data-intensive applications and keeps the monolith’s simplicity fairly well.
 
-Press enter or click to view image in full size
-Press enter or click to view image in full size
-Single-process vs modular vs distributed monolith.
+{{< layout caption="Single-database monolith vs multi-database monolith." caption-position="center" >}}
+    {{< column align="center" valign="center" >}}
+      {{< image src="./img/modular-monolith-single-database.png" alt="Monolith with a single database" position="center" >}}
+    {{< /column >}}
+    {{< column >}}
+      {{< image src="./img/modular-monolith-multiple-databases.png" alt="Monolith with multiple databases" position="center" >}}
+    {{< /column >}}
+  {{< /layout >}}
+
 ### The distributed monolith
 >“A distributed monolith is a system that consists of multiple services, but for whatever reason, the entire system has to be deployed together.”
 >— Sam Newman, Monolith to Microservices. [^9]
@@ -203,7 +212,7 @@ This type of problem can happen in a microservices architecture too, but this co
 ## Conclusion
 With all this said, I wanted to insist on one thing:
 
-There are no bad architecture types; there are bad architectural choices instead.
+>There are no bad architecture types; there are bad architectural choices instead.
 
 So, now that we’ve talked about the trade-offs, it’s time to think. The architecture for your systems is one of the things that, unfortunately, you can’t search in Google or Stack Overflow. You will have to find a balance.
 
@@ -211,7 +220,6 @@ I hope I have made things clearer. Let me know what trade-offs won’t let you s
 
 Cheers!
 
-References
 [^1]: The Paul G. Allen School of Computer Science & Engineering: Course CSE490H: Computational Design and Fabrication. Introduction to Distributed Systems.
 
 [^2]: Richards M., Ford N.,(2020) Fundamentals of Software Architecture (An Engineering approach), edited by O’Reilly Media Inc. Chapter “Monolithic Versus Distributed Architecture.”
