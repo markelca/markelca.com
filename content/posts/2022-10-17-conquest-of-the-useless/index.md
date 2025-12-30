@@ -1,5 +1,5 @@
 ---
-title: "Conquest of The Useless"
+title: "Conquest of the Useless"
 Description: "“That’s not useful to learn”, “You’ll never gonna use that”…"
 tags: []
 date: 2022-10-15
