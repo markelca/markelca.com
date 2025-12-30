@@ -83,19 +83,22 @@ pagination.pagerSize = 10
       logoHomeLink = "/"
 
 [[menu.main]]
-  identifier = "about"
-  name       = "About"
-  url        = "/about/"
+  identifier = "projects"
+  name       = "Projects"
+  url        = "/projects/"
+  weight = 10
 
 [[menu.main]]
   identifier = "posts"
   name       = "Posts"
   url        = "/posts/"
+  weight = 20
 
 [[menu.main]]
-  identifier = "projects"
-  name       = "Projects"
-  url        = "/projects/"
+  identifier = "about"
+  name       = "About"
+  url        = "/about/"
+  weight = 30
 
 [caches]
   [caches.images]
