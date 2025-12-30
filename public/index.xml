@@ -7,8 +7,15 @@
     <generator>Hugo</generator>
     <language>en</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Tue, 11 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/projects/</link>
+      <pubDate>Tue, 30 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/</guid>
+      <description>&lt;p&gt;A collection of my open source projects and personal experiments. Most of these focus on developer tools, systems programming, and productivity.&lt;/p&gt;&#xA;&lt;h2 id=&#34;-clapinvim&#34;&gt;⚡ &lt;a href=&#34;https://github.com/markelca/clapi.nvim&#34;&gt;clapi.nvim&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Language:&lt;/strong&gt; Lua&lt;br&gt;&#xA;&lt;strong&gt;Frameworks:&lt;/strong&gt; telescope.nvim&lt;/p&gt;&#xA;&lt;p&gt;Neovim plugin to display and navigate the public interface of your modules. Makes it easier to understand and work with large codebases by showing you what&amp;rsquo;s exposed.&lt;/p&gt;&#xA;&#xA;&lt;figure class=&#34; &#34;&gt;&#xA;    &lt;img src=&#34;./img/clapi.gif&#34;  alt=&#34;Second image&#34;  class=&#34;&#34;  /&gt;&#xA;    &#xA;&lt;/figure&gt;&#xA;&#xA;&#xA;&lt;h2 id=&#34;tunadb&#34;&gt;🐟&lt;a href=&#34;https://github.com/markelca/TunaDB&#34;&gt;TunaDB&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Language:&lt;/strong&gt; Rust&lt;br&gt;&#xA;&lt;strong&gt;Frameworks:&lt;/strong&gt; clap, tokio&lt;/p&gt;&#xA;&lt;p&gt;A disk-based key-value store implementation. Built to learn Rust and explore storage engine fundamentals.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>
