@@ -43,7 +43,9 @@ Batteries-included template to deploy web servers on AWS. Leverages Terraform an
 **Language:** TypeScript  
 **Frameworks:** Next.js
 
-Terminal AI chat application with live streaming to a Next.js web UI. Experiments with real-time AI interactions across different interfaces.
+Terminal AI chat application with pluggable providers/storage and a Next.js web interface for real-time session viewing.
+
+{{< figure src="./img/chat.ai.png" alt="Second image" >}}
 
 ## ⚙️ [dotfiles](https://github.com/markelca/dotfiles)
 **Language:** Nix
